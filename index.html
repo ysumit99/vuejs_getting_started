@@ -22,8 +22,8 @@
       <h1 v-if="viewed">You have viewed this page</h1>
       <h1 v-else>You have NOT viewed this page</h1>
        <h1 v-once>{{message}}</h1>
-       <h1 v-bind:title="title">{{ message }}</h1>
-       <img v-bind:src="url" v-bind:alt="title" v-bind:title="title"> 
+       <h1 :title="title">{{ message }}</h1>
+       <img :src="url" :alt="title" :title="title"> 
 
     </div>
   </body>
