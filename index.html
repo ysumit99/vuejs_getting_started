@@ -19,6 +19,11 @@
   <body>
     <div id="app">
       <h1 v-cloak>{{message}}</h1>
+      <ul>
+        <li style="list-style-type:none;" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li>
+
+        <li style="list-style-type:none;" v-for="count in count">Testing v for by printing 10 times!</li>
+      </ul>
       <h1 v-if="viewed">You have viewed this page</h1>
       <h1 v-else>You have NOT viewed this page</h1>
        <h1 v-once>{{message}}</h1>
@@ -39,7 +44,13 @@
         title: "testing v-bind" + new Date(),
         url: "https://vuejs.org/images/logo.png",
         viewed: 0,
-        viewed2: 1
+        viewed2: 1,
+        todos: [
+          {text: 'Learn Vue', id: 1},
+          {text: 'Like the video', id: 2},
+          {text: 'Subscribe to DevMarketer', id: 3}
+        ],
+        count: 10
       }
     })
   </script>
