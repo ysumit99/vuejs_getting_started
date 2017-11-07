@@ -19,6 +19,7 @@
   <body>
     <div id="app">
       <h1 v-cloak>{{message}}</h1>
+      <input type="text" v-model = "message" />
       <ul>
         <li style="list-style-type:none;" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li>
 
